@@ -1,0 +1,54 @@
+.container-lg {
+  background: radial-gradient(
+    321px at 8.3% 75.7%,
+    rgb(209, 247, 241) 0%,
+    rgb(249, 213, 213) 81%
+  );
+  border-radius: 15px;
+}
+
+.prnt-background {
+  background-image: url();
+}
+
+.search_box {
+  padding-top: 10px;
+}
+
+ul {
+  list-style: none;
+}
+
+#degrees-unit {
+  font-size: 55px;
+}
+
+#celLink {
+  font-size: 20px;
+}
+
+.divider {
+  font-size: 20px;
+}
+
+#fahLink {
+  font-size: 20px;
+}
+
+.a_city {
+  margin-top: 20px;
+}
+
+.cute_sun_icon {
+  width: 70px;
+}
+
+.shonobu_icon {
+  width: 120px;
+  margin-left: 40px;
+}
+
+/*FORECAST ICONS*/
+.sun_icon {
+  width: 100px;
+}
