@@ -13,11 +13,29 @@
     />
     <!--CSS FILE LINK-->
     <link rel="stylesheet" href="src/styles.css" />
-    <title>The Nezuko Weather App</title>
+    <!--GOOGLE FONTS LINK-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!--FONT AWESOME LINK-->
+    <script
+      src="https://kit.fontawesome.com/3aa6c41123.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--API LINK-->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!---->
+    <title>The Shunobu Weather App</title>
   </head>
   <body>
     <!--CONTAINER-->
-    <div style="max-width: 1200px; margin: 0 auto; padding: 100px 200px">
+    <div
+      style="max-width: 1200px; margin: 0 auto; padding: 100px 200px"
+      class="prnt-background"
+    >
       <div class="container-lg">
         <!--FORMS-->
 
@@ -36,31 +54,44 @@
 
             <!--BUTTONS-->
             <span class="col-4">
-              <input
-                type="submit"
-                value="Search"
-                class="form-control btn btn-primary shadow-sm"
-              />
+              <button type="button" value="Search" class="btn btn-light">
+                Search
+              </button>
             </span>
           </div>
         </form>
 
         <hr />
-        <p class="a_city" id="city-name">Brooklyn</p>
-
+        <!--CITY AND WEATHER INFORMATION-->
         <div class="row">
-          <div class="col-4">
+          <div class="col">
             <ul>
-              <li>Time and Date</li>
-              <span id="weather-description">weather desc.</span>
-              <li>Humidity: <span class="hum_num" id="humidity">82</span>%</li>
-              <li>Wind: <span class="wind_num" id="wind-speed">2</span>km/h</li>
+              <div class="a_city" id="city-name"><li>Brooklyn</li></div>
+              <div id="time-date"><li>Saturday 2:00pm</li></div>
             </ul>
           </div>
-          <span class="col-4" id="degrees-unit">
-            <img src="cutesun.png" alt="cutesun" class="cute_sun_icon" />
-            15°<span class="units">
-              <a href="#" id="celLink">°C</a><span class="divider"> |</span>
+        </div>
+
+        <div class="row">
+          <div class="col-3">
+            <ul>
+              <span id="weather-description">weather desc.</span>
+              <li class="hum_num">Humidity: <span id="humidity">82</span>%</li>
+              <li class="wind_num">Wind: <span id="wind-speed">2</span>km/h</li>
+            </ul>
+          </div>
+          <!--Weather Icon-->
+          <span class="col-6" id="degrees-unit">
+            <img
+              src="cutesun.png"
+              alt="cutesun"
+              class="cute_sun_icon"
+              id="temp-icon"
+            />
+            <span id="temperature">15°</span>
+            <span class="units">
+              <a href="#" id="celLink" class="active_cel">°C</a
+              ><span class="divider"> |</span>
               <a href="#" id="fahLink">°F</a>
             </span>
           </span>
@@ -74,35 +105,78 @@
           <div class="col">
             <div class="forecast_one" id="forecast-one">
               <div class="day_one" id="day-one">FRIDAY</div>
+              <br />
+              <i class="far fa-snowflake snowflake fa-4x"></i>
+            </div>
+            <br />
+            <div class="forcast_temp">
+              <span id="max-temp">1° </span>
+              <span id="min-temp">8°</span>
             </div>
           </div>
           <div class="col">
             <div class="forecast_two" id="forecast-two">
               <div class="day_two" id="day-two">SATURDAY</div>
+              <br />
+              <i class="fas fa-wind fa-4x"></i>
+            </div>
+            <br />
+            <div class="forcast_temp">
+              <span id="max-temp">1° </span>
+              <span id="min-temp">8°</span>
             </div>
           </div>
           <div class="col">
             <div class="forecast_three" id="forecast-three">
               <div class="day_three" id="day-three">SUNDAY</div>
+              <br />
+              <i class="fas fa-cloud-showers-heavy fa-4x"></i>
+            </div>
+            <br />
+            <div class="forcast_temp">
+              <span id="max-temp">1° </span>
+              <span id="min-temp">8°</span>
             </div>
           </div>
           <div class="col">
             <div class="forecast_four" id="forecast-four">
               <div class="day_four" id="day-four">MONDAY</div>
+              <br />
+              <i class="fas fa-cloud fa-4x"></i>
+            </div>
+            <br />
+            <div class="forcast_temp">
+              <span id="max-temp">1° </span>
+              <span id="min-temp">8°</span>
             </div>
           </div>
           <div class="col">
             <div class="forecast_five" id="forecast-five">
               <div class="day_five" id="day-five">TUESDAY</div>
+              <br />
+              <i class="far fa-sun fa-4x"></i>
+            </div>
+            <br />
+            <div class="forcast_temp">
+              <span id="max-temp">1° </span>
+              <span id="min-temp">8°</span>
             </div>
           </div>
           <div class="col">
             <div class="forecast_six" id="forecast-six">
               <div class="day_six" id="day-six">WEDNESDAY</div>
+              <br />
+              <i class="far fa-moon fa-4x"></i>
+            </div>
+            <br />
+            <div class="forcast_temp">
+              <span id="max-temp">1° </span>
+              <span id="min-temp">8°</span>
             </div>
           </div>
         </div>
-
+        <hr />
+        <footer><a href="#">Open Source-Code</a> by Aisha-Noor Tudor</footer>
         <!--CONTAINER CLOSING TAG-->
       </div>
     </div>

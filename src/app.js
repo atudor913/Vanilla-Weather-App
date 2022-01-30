@@ -1,1 +1,101 @@
-console.log("does this link work?");
+function showWeather(response) {
+  console.log(response);
+  document.querySelector("#city-name").innerHTML = response.data.name;
+  document.querySelector("#temperature").innerHTML = Math.round(
+    `${response.data.main.temp}`
+  );
+  document.querySelector("#weather-description").innerHTML =
+    response.data.weather[0].description;
+  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+  document.querySelector("#wind-speed").innerHTML = Math.round(
+    response.data.wind.speed
+  );
+  let weatherIcon = document
+    .querySelector("#temp-icon")
+    .setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
+
+  celciusTemp = response.data.main.temp;
+}
+
+function showCity(city) {
+  let apiKey = "10d1c4efa3b825ba6b0336d233f5ea47";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(`${apiUrl}&appid=${apiKey}`).then(showWeather);
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let city = document.querySelector("#chosen-city").value;
+  showCity(city);
+}
+
+function showFahrenheit(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  let fahTemp = (celciusTemp * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahTemp);
+}
+
+function showCelcius(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celciusTemp);
+}
+
+let search = document.querySelector("#submit-form");
+search.addEventListener("submit", handleSubmit);
+
+let celciusTemp = null;
+
+let fahrenheit = document.querySelector("#fahLink");
+fahrenheit.addEventListener("click", showFahrenheit);
+
+let celcius = document.querySelector("#celLink");
+celcius.addEventListener("click", showCelcius);
+
+/*(0°C × 9/5) + 32 = 32°F
+ */
+
+showCity("Brooklyn");
+
+/*DATE INTERGRATION*/
+let setting = new Date();
+
+let days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+
+let months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
+let currentDay = days[setting.getDay()];
+let currentMin = setting.getMinutes();
+let currentHour = setting.getHours();
+let currentMonth = months[setting.getMonth()];
+
+let currentSettings = `${currentDay} ${currentHour}:${currentMin}`;
+console.log(currentSettings);
+
+let inputTime = document.querySelector("#time-date");
+inputTime.innerHTML = currentSettings;

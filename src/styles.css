@@ -8,7 +8,8 @@
 }
 
 .prnt-background {
-  background-image: url();
+  background-color: #ccffec;
+  /*background-image: url();*/
 }
 
 .search_box {
@@ -19,12 +20,47 @@ ul {
   list-style: none;
 }
 
+.a_city {
+  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Raleway", sans-serif;
+}
+
+#time-date {
+  color: blueviolet;
+  /*font-family: "Noto Sans JP", sans-serif;
+  font-family: "Raleway", sans-serif;*/
+}
+
+#weather-description {
+  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Raleway", sans-serif;
+}
+
+.hum_num {
+  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Raleway", sans-serif;
+}
+
+#humidity {
+  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Raleway", sans-serif;
+}
+
+.wind_num {
+  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Raleway", sans-serif;
+}
+
 #degrees-unit {
   font-size: 55px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 #celLink {
   font-size: 20px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .divider {
@@ -33,10 +69,8 @@ ul {
 
 #fahLink {
   font-size: 20px;
-}
-
-.a_city {
-  margin-top: 20px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .cute_sun_icon {
@@ -49,6 +83,49 @@ ul {
 }
 
 /*FORECAST ICONS*/
-.sun_icon {
-  width: 100px;
+
+.day_one {
+  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Raleway", sans-serif;
+}
+
+.day_two {
+  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Raleway", sans-serif;
+}
+
+.day_three {
+  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Raleway", sans-serif;
+}
+
+.day_four {
+  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Raleway", sans-serif;
+}
+
+.day_five {
+  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Raleway", sans-serif;
+}
+
+.day_six {
+  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Raleway", sans-serif;
+}
+
+#max-temp {
+  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Raleway", sans-serif;
+  padding-left: 12px;
+}
+
+#min-temp {
+  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Raleway", sans-serif;
+  padding-left: 8px;
+}
+
+.form-control btn btn-primary shadow-sm {
+  background-color: blueviolet;
 }
