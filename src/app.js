@@ -40,33 +40,15 @@ inputTime.innerHTML = currentSettings;
 /*FORECAST*/
 
 function showForecast(response) {
-  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast-temps");
   let forecastHTML = `<div class="row">`;
-  let days = [
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
-
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `  
       <div class="col-2">
             <div class="forecast_one" id="forecast-one">
-              <div class="day_one" id="day-one">${day}</div>
               
-               <img src="http://openweathermap.org/img/wn/10d@2x.png"
             alt=""
             width="65"/>
             </div>
               <div class="forcast_temp">
-              <span id="max-temp">1° </span>
-              <span id="min-temp">8°</span>
             </div>
           </div>`;
   });
