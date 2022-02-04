@@ -59,6 +59,9 @@ function showForecast(response) {
         `  
       <div class="col-2">
             <div class="forecast_one" id="forecast-one">
+              <div class="day_one" id="day-one">${formatDay(
+                forecastDay.dt
+              )}</div>
               
             alt=""
             width="65"/>
