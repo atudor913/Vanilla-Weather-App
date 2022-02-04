@@ -51,6 +51,12 @@ function showForecast(response) {
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast-temps");
   let forecastHTML = `<div class="row">`;
+
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `  
       <div class="col-2">
             <div class="forecast_one" id="forecast-one">
               
