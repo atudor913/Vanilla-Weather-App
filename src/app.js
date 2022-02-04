@@ -158,6 +158,9 @@ fahrenheit.addEventListener("click", showFahrenheit);
 let celcius = document.querySelector("#celLink");
 celcius.addEventListener("click", showCelcius);
 
+let searchButton = document.querySelector("#search-button");
+searchButton.addEventListener("click", handleSubmit);
+
 /*(0°C × 9/5) + 32 = 32°F
  */
 
