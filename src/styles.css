@@ -1,8 +1,9 @@
 .container-lg {
-  background: radial-gradient(
-    321px at 8.3% 75.7%,
-    rgb(209, 247, 241) 0%,
-    rgb(249, 213, 213) 81%
+  background: linear-gradient(
+    to right,
+    rgb(198, 255, 221),
+    rgb(251, 215, 134),
+    rgb(247, 121, 125)
   );
   border-radius: 15px;
 }
