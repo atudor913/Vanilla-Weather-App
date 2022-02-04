@@ -74,6 +74,7 @@ function showForecast(response) {
               <span id="min-temp">${Math.round(forecastDay.temp.min)}°</span>
             </div>
           </div>`;
+    }
   });
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
